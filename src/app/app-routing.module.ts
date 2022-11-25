@@ -7,7 +7,7 @@ import {AuthGuardService} from "./Services/auth-guard.service";
 import {AuthenticationComponent} from "./authentication/authentication.component";
 
 const routes: Routes = [
-  {path:'films',component:FilmsListComponent},
+  {path:'',component:FilmsListComponent},
   {path:'films/:id',component:FilmDetailComponent},
   {path:'admin',component:AdminComponent,canActivate:[AuthGuardService]},
   {path:'auth',component:AuthenticationComponent}
