@@ -15,6 +15,7 @@ import { AuthenticationComponent } from './authentication/authentication.compone
 import {MatTabsModule} from "@angular/material/tabs";
 import {MatCardModule} from "@angular/material/card";
 import {MatChipsModule} from "@angular/material/chips";
+import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 
 @NgModule({
   declarations: [
@@ -35,6 +36,7 @@ import {MatChipsModule} from "@angular/material/chips";
     MatTabsModule,
     MatCardModule,
     MatChipsModule,
+    BrowserAnimationsModule
 
   ],
   providers: [FilmService],

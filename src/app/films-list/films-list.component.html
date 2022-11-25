@@ -1,13 +1,20 @@
-<div class="topnav">
-  <a class="active" href="#home">Home</a>
-  <a href="#news">Favoris</a>
-  <a href="#contact">Contact</a>
-  <a href="#about">About</a>
-  <input type="text" name ="searchedText" [(ngModel)]="searchedText" (ngModelChange)="_searchTextInputChanged()" (change)="_searchTextInputChanged()" placeholder="Search.." >
+<div class="home">
+    <div class="topnav">
+      <a class="active" href="#home">Home</a>
+      <a href="#news">Favoris</a>
+      <a href="#contact">Contact</a>
+      <a href="#about">About</a>
+      <input type="text" name ="searchedText" [(ngModel)]="searchedText" (ngModelChange)="_searchTextInputChanged()" (change)="_searchTextInputChanged()" placeholder="Search.." >
+    </div>
+    <div class="fill">
+
+      <img src="/assets/wallE.jpg"/>
+      <div class="top-left">Welcome to MovieGoers</div>
+    </div>
+    <ul>
+
+      <app-film-item *ngFor="let element of films;let i=index" [film]="element" [routerLink]="['/films/'+element.id,element.id]" >film</app-film-item>
+
+
+    </ul>
 </div>
-<ul>
-
-  <app-film-item *ngFor="let element of films;let i=index" [film]="element" [routerLink]="['/films/'+element.id,element.id]" >film</app-film-item>
-
-
-</ul>
