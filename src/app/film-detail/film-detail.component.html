@@ -1,0 +1,104 @@
+<li>
+  <div id="title"> <p>{{film.title}}</p></div>
+  <div id="photo">
+    <img  width="90px" height="100px" >
+  </div>
+</li>
+<div class="hero">
+  <div class="backdrop">
+    <div class="lazyloaded">
+      <img class="lazyload image" src="https://image.tmdb.org/t/p/original/{{ film.poster_path }}">
+    </div>
+  </div>
+  <div class="pane">
+    <div>
+      <div class="name">{{ film.title }}</div>
+      <div class="meta">
+
+        <div class="info">
+
+          <span class="rate">
+            <i class="material-icons">star</i><span>{{ film.vote_average }}</span> /10
+          </span>
+          <span>{{film.release_date | date: 'yyyy' }}</span>
+
+        </div>
+      </div>
+      <div class="desc">{{ film.overview }}</div>
+
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-12">
+      <mat-tab-group class="mt-5 mb-5" mat-align-tabs="center" animationDuration="0ms">
+        <mat-tab label="Overview">
+          <div class="listing-space info__movies">
+            <div class="left">
+              <div class="poster">
+                <img src="https://image.tmdb.org/t/p/w370_and_h556_bestv2/{{ film.poster_path }}">
+              </div>
+            </div>
+            <div class="right">
+              <div class="overview">
+                <h2 class="title">Storyline</h2>
+                <div>{{film.overview}}</div>
+              </div>
+              <div class="stats">
+                <ul class="nolist">
+                  <li>
+                    <div class="label">
+                      Released
+                    </div>
+                    <div class="value">
+                      {{ film.release_date | date:'dd/mm/yyyy' }}
+                    </div>
+                  </li>
+
+
+
+
+
+
+                </ul>
+              </div>
+            </div>
+          </div>
+
+
+
+        </mat-tab>
+      </mat-tab-group>
+    </div>
+  </div>
+</div>
+<a class="link" href="https://codepen.io/simoberny/pen/qxxOqj" target="_blank">Dark Version</a>
+
+
+<div class="movie_card" id="tomb">
+  <div class="info_section">
+    <div class="movie_header">
+      <img class="locandina" src="https://image.tmdb.org/t/p/w370_and_h556_bestv2/{{ film.poster_path }}"/>
+      <h1>{{film.title}}</h1>
+
+      <span class="minutes">{{film.release_date}}</span>
+      <p class="type">Action, Fantasy</p>
+    </div>
+    <div class="movie_desc">
+      <p class="text">
+      {{film.overview}}
+      </p>
+    </div>
+    <div class="movie_social">
+      <ul>
+        <li><i class="material-icons">share</i></li>
+        <li><i class="material-icons"></i></li>
+        <li><i class="material-icons">chat_bubble</i></li>
+      </ul>
+    </div>
+  </div>
+  <div class="blur_back tomb_back"></div>
+</div>
+
